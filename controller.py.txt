@@ -1,0 +1,20 @@
+from config import SAFE_DISTANCE, WARNING_DISTANCE, CRITICAL_DISTANCE
+
+class EmergencyBrakeController:
+
+    def __init__(self, vehicle):
+        self.vehicle = vehicle
+
+    def evaluate(self, distance):
+
+        print(f"Distance from obstacle: {distance} cm")
+
+        if distance > SAFE_DISTANCE:
+            print("System Status: SAFE")
+
+        elif WARNING_DISTANCE < distance <= SAFE_DISTANCE:
+            self.vehicle.warning()
+
+        elif distance <= CRITICAL_DISTANCE:
+            print("🚨 EMERGENCY BRAKE ACTIVATED!")
+            self.vehicle.apply_brake()

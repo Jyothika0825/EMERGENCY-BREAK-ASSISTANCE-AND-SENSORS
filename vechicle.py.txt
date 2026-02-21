@@ -1,0 +1,15 @@
+class Vehicle:
+
+    def __init__(self, speed):
+        self.speed = speed
+        self.brake_applied = False
+
+    def apply_brake(self):
+        self.brake_applied = True
+        self.speed = 0
+
+    def warning(self):
+        print("⚠ WARNING: Obstacle Detected!")
+
+    def status(self):
+        print(f"Speed: {self.speed} km/h | Brake Applied: {self.brake_applied}")

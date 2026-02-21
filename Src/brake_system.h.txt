@@ -1,0 +1,30 @@
+#ifndef BRAKE_SYSTEM_H
+#define BRAKE_SYSTEM_H
+
+#include <Arduino.h>
+#include "config.h"
+
+class BrakeSystem {
+public:
+    BrakeSystem() {
+        pinMode(BUZZER_PIN, OUTPUT);
+        pinMode(BRAKE_RELAY_PIN, OUTPUT);
+    }
+
+    void safeMode() {
+        digitalWrite(BUZZER_PIN, LOW);
+        digitalWrite(BRAKE_RELAY_PIN, LOW);
+    }
+
+    void warningMode() {
+        digitalWrite(BUZZER_PIN, HIGH);
+        digitalWrite(BRAKE_RELAY_PIN, LOW);
+    }
+
+    void emergencyBrake() {
+        digitalWrite(BUZZER_PIN, HIGH);
+        digitalWrite(BRAKE_RELAY_PIN, HIGH);
+    }
+};
+
+#endif

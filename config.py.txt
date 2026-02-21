@@ -1,0 +1,6 @@
+SAFE_DISTANCE = 50      # cm
+WARNING_DISTANCE = 30   # cm
+CRITICAL_DISTANCE = 15  # cm
+
+MAX_SPEED = 25          # km/h
+DECELERATION_RATE = 8   # m/s^2

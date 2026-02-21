@@ -1,0 +1,15 @@
+#ifndef CONFIG_H
+#define CONFIG_H
+
+// Pin Configuration
+#define TRIG_PIN 9
+#define ECHO_PIN 10
+#define BUZZER_PIN 6
+#define BRAKE_RELAY_PIN 7
+
+// Distance Thresholds (in cm)
+#define SAFE_DISTANCE 70
+#define WARNING_DISTANCE 40
+#define CRITICAL_DISTANCE 20
+
+#endif

@@ -1,0 +1,11 @@
+import random
+
+class UltrasonicSensor:
+
+    def __init__(self):
+        self.distance = 100
+
+    def read_distance(self):
+        # Simulated obstacle distance
+        self.distance = random.randint(5, 100)
+        return self.distance
